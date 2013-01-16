@@ -7,6 +7,7 @@
 	get_header('single');
 ?>
 <section id="works">
+	<h1 class="displayHidden">Works</h1>
 					<header>
 						<nav id="subNav">
 							<ul>	

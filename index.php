@@ -2,7 +2,8 @@
 	get_header();
 ?>
 
-<section id="news">		
+<section id="news">	
+	<h1 class="displayHidden">News</h1>	
 <?php $num = 0;
 if(have_posts()): 
 	while(have_posts()): the_post(); $num++ ?>
@@ -19,14 +20,12 @@ if(have_posts()):
 						<?php comments_number( 'Aucun commentaire', '1 commentaire', '% commentaires' ); ?> 
 					</a></span>
 				</footer>
-				<section class="news_content">
 					<?php	if ( has_post_thumbnail() ) { ?>
-							<figure>
+							<figure class="news_content">
 								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 							</figue>
 						<?php	} 
 						the_content(); ?>	
-				</section>
 		</article>
 <?php endwhile; ?>
 <?php endif; ?>

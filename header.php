@@ -16,15 +16,14 @@
 <body>
 <section class="wrapper">
         	<header id="head">
-        		<a href="<?php bloginfo('wpurl'); ?>" title="home" id="logoPosition0">
-						<img src="<?php bloginfo('template_directory'); ?>/images/logo0.png" alt="<?php bloginfo('name'); ?>"  />
+        			<a href="<?php bloginfo('wpurl'); ?>" title="home" id="logoPosition0">
+						<img src="<?php bloginfo('template_directory'); ?>/images/logo0.png" width="36px" height="36px" alt="<?php bloginfo('name'); ?>"  />
 						<h1 id="h1Min"><?php bloginfo('name'); ?></h1>  
 					</a>
 
 				<?php wp_nav_menu(array('container'       => 'nav', 'menu' => 'Header Menu')); ?>					
-				
-			<section id="subHeader">
-				<hgroup>
+
+				<hgroup id="subHeader">
 					<h1>web designer</h1>
 					<h2>emmanuel samu</h2>
 					
@@ -36,9 +35,8 @@
 					<a href="<?php bloginfo('wpurl'); ?>" title="home" id="home" class="link-header"><img src="<?php bloginfo('template_directory'); ?>/images/logoReflet.png" alt="webdesigner" id="logo" width="280px" height="184px" /> </a>
 					<div class="clear"></div>
 				</hgroup>
-									
-			</section>
 			
 			</header> <!-- fin HEADER -->
 			
 <section id="content">
+	<h1 class="displayHidden">Contenu</h1>

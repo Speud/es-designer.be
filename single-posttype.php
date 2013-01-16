@@ -2,8 +2,8 @@
 	get_header();
 ?>
 LOL
-<section id="news">		
-	<div id="accordion">
+<section id="news">
+	<h1 class="displayHidden">News</h1>		
 <?php if(have_posts()): ?>
 <?php while(have_posts()): the_post(); ?>
 
@@ -11,8 +11,7 @@ LOL
 		<article <?php post_class(); ?>>
 			<header>
 				<h1><?php the_title(); ?></h1>
-			</header>
-			<div>	
+			</header>	
 				<footer>
 					<?php _e('Posté par'); ?> <?php the_author(); ?> <?php _e('le'); ?> <?php echo get_the_date(); ?>
 					<span class="count_comments">
@@ -23,11 +22,9 @@ LOL
 					<?php the_post_thumbnail('folio-work'); ?>
 					<?php the_content(); ?>	
 				</section>
-			</div>
 		</article>
 <?php endwhile; ?>
 <?php endif; ?>
-	</div>
 </section>
 
 <div id="comments">
