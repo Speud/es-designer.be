@@ -277,7 +277,10 @@ a:visited {
   font: 200 1em/1.3 @police2;
   border-bottom: 1px solid @color1;
   text-decoration: none;
-    transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
 }
 a:active,
 a:hover {
@@ -380,7 +383,7 @@ body a.top_link  {
 #head section {
   width: 80%;
   margin: 0 auto;
-  padding: 1.5em 0 3em 0;
+  padding: 1em 0;
   position: relative;
   max-width: 1024px;
 }
@@ -390,16 +393,21 @@ body a.top_link  {
   font: 400 2.5em/0 @police1;
   text-indent: -999999px;
 }
-#head a#logoPosition {
+#head a#logoPosition, a#logoPosition0 {
   position: absolute;
   top: 5px;
   right: 10%;
   border: none;
   text-decoration: none;
+  padding-bottom: 0.5em;
 }
 	a#logoPosition:hover {
 		opacity: 0.7;
 	}
+
+#logoPosition0 {
+    display: none;
+  }
 h1#h1Min {
   position: static;
   text-indent: 0;
@@ -511,8 +519,7 @@ input[type=submit]:active {
 }
 #news article {
   clear: both;
-  margin-top: 1em;
-  border-bottom: 1px solid @colorText3;
+  margin-top: 2em;
 }
 	#news article:first-child {
 		margin-top: 0;
@@ -548,10 +555,9 @@ input[type=submit]:active {
 	}
 .news_content {
 	padding: 0.5em 0;
-	height: 180px;
 }
   .news_content p, .news_content ul, .news_content pre { 
-	padding-bottom: 0.5em;
+	   padding-bottom: 0.5em;
   }
 .count_comments {
 	float: right;
@@ -567,6 +573,9 @@ input[type=submit]:active {
   -moz-transform: perspective( 400px ) rotateY( -30deg );
   -webkit-transform: perspective( 400px ) rotateY( -30deg );
     transition: all 0.2s linear 0s;
+    -o-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -576,7 +585,6 @@ input[type=submit]:active {
   -moz-transform: none;
   -webkit-transform: none;
 	}
-	
 		
 #news strong {
 	font-weight: bold;
@@ -604,6 +612,10 @@ input[type=submit]:active {
 .works-content p {
 	padding: 0.5em 0;
 }
+.works-content img {
+  width: 100%;
+  height: auto;
+}
 h3 {
   color: @color2;
   font-size: 1.5em;
@@ -621,6 +633,7 @@ h3 em {
 	}
 h3#slogan {
 	text-transform: none;
+  margin-bottom: 1em;
 }
 .widget {
 	padding: 1em 0 0.5em 0;
@@ -919,7 +932,6 @@ code {
   border-bottom: 1px solid @color1;
   text-decoration: none;
 }
-/* effects EXAMPLE*/
 .gallery-effects .mask-1,
 .gallery-effects .mask-2 {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1062,7 +1074,7 @@ code {
 }
 #card li {
 	height: 30px;
-	background: url('images/etoiles.png') no-repeat 150px 10px;
+	background: url('images/etoiles.png') no-repeat;
 }
 #card li.etoile5 {
 	background-position: 150px -110px;
@@ -1349,9 +1361,8 @@ code {
 }
 @media only screen and (max-width: 959px) {
   /* zone de floue pour écrans < 17' */
-
-  #head h1 {
-    bottom: 2em;
+  .footer {
+      margin: auto;
   }
   #news article p {
     width: 60%;
@@ -1366,15 +1377,6 @@ code {
     width: 140px;
     height: 175px;
   }
-
-  #logoPosition {
-    position: absolute;
-    left: 10%;
-  }
-
-  #head nav {
-    padding-top: 2em;
-  }
   #head nav ul {
     margin: 0 auto;
   }
@@ -1388,15 +1390,7 @@ code {
     font-size: 2.7em;
 	bottom: 14px;
   }
-  #head h3 {
-    float: none;
-    width: 100%;
-  }
-  #logo {
-    float: none;
-    clear: both;
-    margin-top: 1em;
-  }
+
   #home {
     border-bottom: none;
     text-decoration: none;
@@ -1415,6 +1409,9 @@ code {
   }
   #card-1 {
     clear: both;
+  }
+  #form {
+    padding-top: 2em;
   }
 }
 @media only screen and (max-width: 845px) {
@@ -1466,6 +1463,37 @@ code {
       float: right;
     }
 }
+@media only screen and (max-width: 700px) {
+  #logoPosition, #logoPosition0 {
+    position: absolute;
+    left: 10%;
+  }
+    #logoPosition0 {
+      display: block;
+    }
+  
+  #head nav {
+    padding-top: 3em;
+  }
+  
+  #head h1 {
+    bottom: 2em;
+  }
+
+  #head nav li {
+      padding: 0em 1.5em;
+  }
+    #head nav li:first-child {
+      padding-left: 0em;
+    }
+
+  #logo {
+    display: none;
+  }
+  h3#slogan {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 617px) {
     .box15 {
       float: left;
@@ -1474,6 +1502,9 @@ code {
 @media only screen and (max-width: 570px) {
   #card-2 {
     left: 3em;
+  }
+  #head nav li {
+      padding: 0em 1em;
   }
 }
 @media only screen and (max-width: 545px) {
@@ -1504,9 +1535,6 @@ code {
   #news article p {
     width: 100%;
   } 
-  #news img {
-    float: none;
-  }
 
   .info_contact {
     clear: both;
@@ -1532,20 +1560,21 @@ code {
 }
 @media only screen and (max-width: 479px) {
   /* smartphone en mode portrait */
-  body {
-    background-color: yellow;
+  .link-header:link, .link-header:visited {
+    font-size: 1em;
   }
   #head nav li {
     margin: 0.3em 1em 0.3em 0;
+    padding: 0em 0.4em;
   }
   #head h2 {
-    font-size: 2em;
+    font-size: 2.3em;
     bottom: 10px;
   }
   #logo {
-    width: 200px;
+    width: 100%;
     height: auto;
-    margin-top: 0.5em;
+    margin-top: 0.2em;
   }
   .footerImg {
     width: 250px;
@@ -1559,7 +1588,14 @@ code {
   }
   #news img {
     float: none;
+    transform: none;
+     -moz-transform: none;
+     -webkit-transform: none;
+    margin-left: 0;
   }
+    #news figure a:link {
+      border-bottom: none;
+    }
   .count_comments {
     float: none;
   }
@@ -1570,6 +1606,17 @@ code {
     float: none;
     clear: both;
   }
+  #index_cards li {
+      -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     height: auto;
+     float: left;
+     left: 0;
+  }
+    #index_cards li:hover {
+      -moz-transform: scale(1) rotate(0deg);
+      -webkit-transform: scale(1) rotate(0deg);
+    }
     .info_contact {
     clear: both;
     float: none;
@@ -1594,21 +1641,82 @@ code {
   #intro {
     width: 100%;
   }
-  #index_cards li {
-      -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-     height: auto;
-  }
-    #index_cards li:hover {
-      -moz-transform: scale(1) rotate(0deg);
-      -webkit-transform: scale(1) rotate(0deg);
-    }
-
-  #card-1 {
-    left: 1em;
-  }
 }
-@media only screen and (min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5) {
+@media only screen and (max-width: 375px) {
+  #head nav li {
+        padding: 0em 0em;
+        margin-bottom: 0.5em;
+    }
+}
+@media only screen and (max-width: 330px) {
+   #logoPosition0 h1, #logoPosition h1 {
+    font-size: 0.8em;
+   }
+   #head nav ul {
+    padding-top: 0;
+  }
+   #head nav a:link, #head nav a:visited {
+    padding: 0.5em 2em;
+    display: block;
+  }
+    #head nav a:hover, #head nav a:active {
+      border: none;
+    }
+   #head h2 {
+    font-size: 1.9em;
+    bottom: 10px;
+  }
+  #head nav li {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+  }
+  #head nav {
+    padding-top: 3em;
+    height: auto;
+  }
+  #head nav li:last-child {
+    margin: 0;
+  }
+  #form input, #form textarea {
+    width: 100%;
+  }
+  .attachment-folio-work {
+    width: 200px;
+    height: 140px;
+  }
+  .gallery {
+    width: 200px;
+    height: 140px;
+  }
+  .gallery-effects:hover .gallery-text, .gallery .mask {
+      width: 200px;
+  }
+  .box15 {
+    width: 200px;
+  }
+  #card li > img {
+    width: 18px;
+    height: 18px;
+    bottom: -0.3em;
+  }
+      #card li.etoile5 {
+          background-position: 100px -110px;
+        }
+        #card li.etoile4 {
+          background-position: 100px -80px;
+        }
+        #card li.etoile3 {
+          background-position: 100px -50px;
+        }
+        #card li.etoile2 {
+          background-position: 100px -20px;
+        }
+        #card li.etoile1 {
+          background-position: 100px 10px;
+        }
+}
+@media only screen and (min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 3), only screen and (-moz-min-device-pixel-ratio: 3) {
 	.attachment-folio-work {
 	  height: 400px;
 	  width: 600px;
@@ -1625,9 +1733,6 @@ code {
 		 height: 368px;
 		width: 560px;
 	}
-}
-@media only screen and (min-device-pixel-ratio: 3), only screen and (-moz-min-device-pixel-ratio: 3) {
-  
 }
 
 /* ==========================================================================

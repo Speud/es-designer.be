@@ -1,6 +1,6 @@
-			</div> <!-- content -->
+			</section> <!-- content -->
 			<div class="push"><!--//--></div> <!-- clear both -->
-	</div> <!-- fin WRAPPER -->		
+	</section> <!-- fin WRAPPER -->		
 			<footer class="footer">
 				<img src="<?php bloginfo('template_directory'); ?>/images/footer.png" alt="Samu Emmanuel" width="420px" height="70px" class="footerImg" />
 				<p>&copy; 2012 Samu Emmanuel</p>

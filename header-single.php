@@ -2,7 +2,8 @@
 <html lang="<?php bloginfo('language'); ?>">
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="description" content="<?php bloginfo('description'); ?>" >
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<meta name="viewport" content="width=device-width">
 	<title><?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
@@ -14,7 +15,7 @@
 </head>
 <body>
 
-<div class="wrapper">
+<section class="wrapper">
         	<header id="head">
 				
 				<?php wp_nav_menu(array('container'       => 'nav', 'menu' => 'Header Menu')); ?>					
@@ -27,4 +28,4 @@
 				
 			</header> <!-- fin HEADER -->
 			
-<div id="content">
+<section id="content">
