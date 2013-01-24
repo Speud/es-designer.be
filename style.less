@@ -215,6 +215,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+
+@font-face {
+  font-family: 'OpenSansRegular';
+    src: url('font/OpenSans-Regular-webfont.eot');
+    src: url('font/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/OpenSans-Regular-webfont.woff') format('woff'),
+         url('font/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('font/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+  }
+
+  @font-face {
+  font-family: 'Adamina';
+    src: url('font/Adamina-Regular.ttf'),
+         url('font/Adamina-Regular-webfont.otf') format('otf'),
+         url('font/Adamina-Regular-webfont.ttf') format('truetype'),
+         url('font/Adamina-Regular-webfont.vfb') format('vfb');
+  }
 /* ==========================================================================
    LESS styles
    ========================================================================== */
@@ -227,7 +245,7 @@ table {
  @colorText2 : #888888;
  @colorText3 : #cccccc;
  @colorText4 : #111111;
- @police1 : 'Open Sans', Verdana, Helvetica, sans-serif;
+ @police1 : 'OpenSansRegular', Verdana, Helvetica, sans-serif;
  @police2 : 'Adamina', Georgia, serif;
 /* ==========================================================================
    Author's custom styles
@@ -256,7 +274,7 @@ table {
           font-family: @police1;
           height: 70px;
            clear:both;
-           padding-top: 20px;
+           padding-top: 40px;
         }
             .footerImg {
               height: 70px;
@@ -422,12 +440,14 @@ h1#h1Min {
   }
 #head h2 {
   font: 400 4em/0 @police2;
-  bottom: 22px;
+  bottom: 30px;
+  bottom: 19px\9;
   left: 0;
   z-index: 10;
   position: absolute;
   color: @colorBody;
 }
+
 #head h3 {
   width: 45%;
   font: 400 1.2em/1.8 @police1;
@@ -610,10 +630,13 @@ input[type=submit]:active {
 }
 .works-content p {
 	padding: 0.5em 0;
+  width: 80%;
 }
 .works-content img {
-  width: 100%;
-  height: auto;
+  max-width: auto;
+  max-height: 1024px;
+  width: auto;
+  height: 100%;
 }
 h3 {
   color: @color2;
@@ -999,7 +1022,7 @@ code {
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   text-align: left;
-  padding: 0.2em 0 0.5em 0.5em;
+  padding: 0.2em 0 0.2em 0.5em;
   font-size: 1.5em;
 }
 .gallery-effects:hover .gallery-text {
@@ -1387,7 +1410,7 @@ code {
   }
   #head h2 {
     font-size: 2.7em;
-	bottom: 14px;
+	   bottom: 19px;
   }
 
   #home {
@@ -1397,6 +1420,11 @@ code {
   #subNav {
     text-align: left;
   }
+      #subNav li:first-child a:link {
+        margin-left: 0px;
+        margin-right: 1em;
+      }
+
   #news p {
     width: 80%;
   }
@@ -1488,9 +1516,16 @@ code {
 
   #logo {
     display: none;
+    width: 0\9;
+    height: 0\9;
   }
   h3#slogan {
     width: 100%;
+  }
+
+  .works-content img {
+    width: 100%;
+    height: auto;
   }
 }
 @media only screen and (max-width: 617px) {
@@ -1556,6 +1591,9 @@ code {
   #form textarea {
     float: none;
   }
+  .works-content p {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 479px) {
   /* smartphone en mode portrait */
@@ -1568,7 +1606,8 @@ code {
   }
   #head h2 {
     font-size: 2.3em;
-    bottom: 10px;
+    bottom: 0px;
+	position: absolute;
   }
   #logo {
     width: 100%;
@@ -1592,18 +1631,19 @@ code {
      -webkit-transform: none;
     margin-left: 0;
   }
-    #news figure a:link {
+    .news_content > a:link {
       border-bottom: none;
     }
   .count_comments {
     float: none;
   }
-  #subNav a:link, #subNav a:active, #subNav a:visited {
+  #subNav a:link, #subNav a:active, #subNav a:visited, #subNav li:first-child a:link {
     margin: 0 0.2em;
   }
   #card {
     float: none;
     clear: both;
+	height: auto;
   }
   #index_cards li {
       -webkit-transform: rotate(0deg);
@@ -1640,6 +1680,9 @@ code {
   #intro {
     width: 100%;
   }
+  .works-content p {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 375px) {
   #head nav li {
@@ -1663,7 +1706,8 @@ code {
     }
    #head h2 {
     font-size: 1.9em;
-    bottom: 10px;
+    bottom: 0px;
+	position: absolute;
   }
   #head nav li {
     display: block;
@@ -1680,19 +1724,28 @@ code {
   #form input, #form textarea {
     width: 100%;
   }
+  .gallery-effects:hover .mask-1, .gallery-effects:hover .mask-2 {
+    display: none;
+  }
   .attachment-folio-work {
-    width: 200px;
-    height: 140px;
+    height: auto;
+    width: 100%;
   }
   .gallery {
-    width: 200px;
-    height: 140px;
+    width: 100%;
+    height: 150px;
+  }
+  .gallery-effects h1 {
+      padding: 0.2em 0 0.2em 0.5em;
+      font-size: 1.3em;
   }
   .gallery-effects:hover .gallery-text, .gallery .mask {
-      width: 200px;
+      width: 100%;
+      height: 150px;
   }
   .box15 {
-    width: 200px;
+    width: 100%;
+    height: 150px;
   }
   #card li > img {
     width: 18px;

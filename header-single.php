@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width">
 	<title><?php bloginfo('name'); ?></title>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Adamina' rel='stylesheet' type='text/css'>
 	<link href="<?php bloginfo('template_directory'); ?>/favicon.ico" rel="icon">
 	<!--[if lt IE 9]>
 			<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
