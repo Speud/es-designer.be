@@ -299,6 +299,7 @@ a:visited {
   -moz-transition: all 0.2s linear 0s;
   -webkit-transition: all 0.2s linear 0s;
   -o-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
 }
 a:active,
 a:hover {
@@ -440,7 +441,7 @@ h1#h1Min {
   }
 #head h2 {
   font: 400 4em/0 @police2;
-  bottom: 30px;
+  bottom: 28px;
   bottom: 19px\9;
   left: 0;
   z-index: 10;
@@ -478,7 +479,7 @@ label {
   color: @colorText2;
   text-shadow: 2px 0px 0px #fff;
   font-size: 0.9em;
-  padding: 0.5em 1em 0 0;
+  padding: 0.7em 1em 0 0;
 }
 input, textarea {
   border: 1px groove @colorText3;
@@ -488,6 +489,10 @@ input, textarea {
   padding: 0.5em;
   margin-bottom: 0.5em;
     transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    -ms-transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
 }
 input:hover, input:focus, textarea:hover {
   border: 1px groove @color2;
@@ -506,6 +511,10 @@ input[type=submit] {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(255, 255, 255, 0.4);
     transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    -ms-transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
 }
 input[type=submit]:hover {
   color: @colorText;
@@ -549,6 +558,7 @@ input[type=submit]:active {
   font-family: @police2;
   text-shadow: 0px 3px 0px #fff;
   text-transform: lowercase;
+  margin-bottom: 7px;
 }	
 #news h1 a {
   color: @color1;
@@ -585,6 +595,7 @@ input[type=submit]:active {
 	margin: 0.5em 0 1em 1em;
   padding: 0.3em;
   float: right;
+  -o-box-shadow: 5px 5px @colorText3;
   -moz-box-shadow: 5px 5px @colorText3;
 	-webkit-box-shadow: 5px 5px @colorText3;
 	box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.1);
@@ -603,6 +614,7 @@ input[type=submit]:active {
 		transform: none;
   -moz-transform: none;
   -webkit-transform: none;
+  -o-transform: none;
 	}
 		
 #news strong {
@@ -627,6 +639,9 @@ input[type=submit]:active {
   padding: 0.5em 0;
   border-bottom: 1px dashed @colorText3;
   width: 100%;
+}
+.works-content {
+  margin-bottom: 2em;
 }
 .works-content p {
 	padding: 0.5em 0;
@@ -724,14 +739,15 @@ h5 {
   clear: both;
   float: left;
   display: block;
-  width: 30%;
+  width: 15%;
   text-align: right;
 }
 #form input,
 #form textarea {
   margin-bottom: 1em;
   float: right;
-  width: 60%;
+  width: 75%;
+  padding: 10px 5px;
 }
 
 #form input[type=submit] {
@@ -815,6 +831,7 @@ code {
 	  border-radius: 4px;
 	  -moz-border-radius: 4px;
 	  -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
 	  color: @colorText;
 	  padding: 0.5em;
 	}
@@ -850,11 +867,11 @@ code {
 #respond {
 	clear: both;
 	padding-top: 1em;
-	width: 45%;
 }
 .comment-notes {
 	color: @color2;
 	font-size: 0.9em;
+  padding: 0px 0px 10px 0px;
 }
 .required {
 	color: red;
@@ -869,18 +886,38 @@ code {
 #comments {
 	clear: both;
 	padding-top: 1em;
-	width: 45%;
+	width: 75%;
 }
 #comments header {
 		border-bottom: 1px dashed @colorText3;
 }
-#commentform label {
-	display: block;
-}
+
 .form-allowed-tags {
-	font-size: 0.9em;
-	margin: 0.5em 0;
+	display: none;
 }
+#commentform input[type=submit] {
+    clear: both;
+    width: 15em;
+  }
+  #commentform {
+    float: none;
+    width: 60%;
+  }
+  #commentform label {
+    float: left;
+    display: block;
+    width: 30%;
+    clear: both;
+  }
+  #commentform input,
+  #commentform textarea {
+    margin-bottom: 1em;
+    float: right;
+    width: 60%;
+    padding: 10px 5px;
+  }
+
+
 .comment_content {
 	margin: 0.5em 0 2em 0;
 }
@@ -900,6 +937,7 @@ code {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   float: left;
   overflow: hidden;
   position: relative;
@@ -1042,6 +1080,7 @@ code {
 .gallery-effects:hover .mask-2 {
   -webkit-transition-delay: 0s;
   -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
   -o-transition-delay: 0s;
   transition-delay: 0s;
 }
@@ -1152,33 +1191,57 @@ code {
 #card-1 {
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
   z-index: 1;
   left: 3em;
   top: 1em;
   transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
 }
 #card-2 {
   z-index: 2;
   left: -5em;
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
   transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
 }
 #card-3 {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
   z-index: 3;
   left: -8em;
   bottom: 0;
   transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
 }
 #card-4 {
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
   z-index: 2;
   left: -12em;
   top: 1em;
     transition: all 0.2s linear 0s;
+    -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
 }
 /* Hover States */
 #index_cards li:hover {
@@ -1187,18 +1250,26 @@ code {
 #card-1:hover {
   -moz-transform: scale(1.1) rotate(0deg);
   -webkit-transform: scale(1.1) rotate(0deg);
+  -ms-transform: scale(1.1) rotate(0deg);
+  -o-transform: scale(1.1) rotate(0deg);
 }
 #card-2:hover {
   -moz-transform: scale(1.1) rotate(0deg);
   -webkit-transform: scale(1.1) rotate(0deg);
+  -ms-transform: scale(1.1) rotate(0deg);
+  -o-transform: scale(1.1) rotate(0deg);
 }
 #card-3:hover {
   -moz-transform: scale(1.1) rotate(0deg);
   -webkit-transform: scale(1.1) rotate(0deg);
+  -ms-transform: scale(1.1) rotate(0deg);
+  -o-transform: scale(1.1) rotate(0deg);
 }
 #card-4:hover {
   -moz-transform: scale(1.1) rotate(0deg);
   -webkit-transform: scale(1.1) rotate(0deg);
+  -ms-transform: scale(1.1) rotate(0deg);
+  -o-transform: scale(1.1) rotate(0deg);
 }
 /****************/
 /*** box fifteen ***/
@@ -1449,6 +1520,9 @@ code {
 		left: 0;
 		top: 0;
 	}
+  #commentform {
+    width: 75%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -1474,6 +1548,7 @@ code {
   #form input,
   #form textarea {
     float: none;
+    width: 81%;
   }
 }
 @media only screen and (max-width: 796px) {
@@ -1554,6 +1629,9 @@ code {
   #index_cards li {
       -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+     transform: rotate(0deg);
      height: auto;
      float: left;
      left: 0;
@@ -1561,6 +1639,9 @@ code {
     #index_cards li:hover {
       -moz-transform: scale(1) rotate(0deg);
       -webkit-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+      -o-transform: scale(1) rotate(0deg);
+      transform: scale(1) rotate(0deg);
     }
 
   #news {
@@ -1569,6 +1650,12 @@ code {
   #news article p {
     width: 100%;
   } 
+  #comments {
+    width: 100%;
+  }
+  #commentform {
+    width: 100%;
+  }
 
   .info_contact {
     clear: both;
@@ -1590,6 +1677,7 @@ code {
   #form input,
   #form textarea {
     float: none;
+    width: 80%;
   }
   .works-content p {
     width: 100%;
@@ -1606,7 +1694,7 @@ code {
   }
   #head h2 {
     font-size: 2.3em;
-    bottom: 0px;
+    bottom: 15px;
 	position: absolute;
   }
   #logo {
@@ -1629,11 +1717,20 @@ code {
     transform: none;
      -moz-transform: none;
      -webkit-transform: none;
+     -ms-transform: none;
+     -o-transform: none;
     margin-left: 0;
   }
     .news_content > a:link {
       border-bottom: none;
     }
+    #commentform, #commentform label {
+      width: 100%;
+    }
+      #commentform input, #commentform textarea {
+        margin-left: 0.5em;
+        width: 97%;
+      }
   .count_comments {
     float: none;
   }
@@ -1648,6 +1745,8 @@ code {
   #index_cards li {
       -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
      height: auto;
      float: left;
      left: 0;
@@ -1655,6 +1754,8 @@ code {
     #index_cards li:hover {
       -moz-transform: scale(1) rotate(0deg);
       -webkit-transform: scale(1) rotate(0deg);
+      -ms-transform: scale(1) rotate(0deg);
+      -o-transform: scale(1) rotate(0deg);
     }
     .info_contact {
     clear: both;
@@ -1706,7 +1807,7 @@ code {
     }
    #head h2 {
     font-size: 1.9em;
-    bottom: 0px;
+    bottom: 13px;
 	position: absolute;
   }
   #head nav li {

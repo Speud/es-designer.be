@@ -30,7 +30,7 @@
 						 <br />
 						<a href="<?php bloginfo('wpurl'); ?>/about" title="en savoir plus">En savoir plus sur moi&nbsp;?</a> ou <a href="<?php bloginfo('wpurl'); ?>/contact" title="contact moi">contact moi ici&nbsp;!</a>
 					</h3>
-					<a href="<?php bloginfo('wpurl'); ?>" title="home" id="home" class="link-header"><img src="<?php bloginfo('template_directory'); ?>/images/logoReflet.png" alt="webdesigner" id="logo" width="280px" height="184px" /> </a>
+					<a href="<?php bloginfo('wpurl'); ?>" title="home" id="home" class="link-header"><img src="<?php bloginfo('template_directory'); ?>/images/logoReflet.png" alt="webdesigner" id="logo" width="280" height="184" /> </a>
 					<div class="clear"></div>
 				</hgroup>
 			

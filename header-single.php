@@ -19,7 +19,7 @@
 				<?php wp_nav_menu(array('container'       => 'nav', 'menu' => 'Header Menu')); ?>					
 					
 					<a href="<?php bloginfo('wpurl'); ?>" title="home" id="logoPosition">
-						<img src="<?php bloginfo('template_directory'); ?>/images/logo0.png" width="36px" height="36px" alt="<?php bloginfo('name'); ?>"  />
+						<img src="<?php bloginfo('template_directory'); ?>/images/logo0.png" width="36" height="36" alt="<?php bloginfo('name'); ?>"  />
 						<h1 id="h1Min"><?php bloginfo('name'); ?></h1>  
 					</a>
 			

@@ -34,7 +34,7 @@ Template Name: Contact Form
 				</li>
 				
 				<li><label for="email">E-mail</label>
-					<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
+					<input type="email" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
 					<?php if($emailError != '') { ?>
 						<span class="error"><?=$emailError;?></span>
 					<?php } ?>

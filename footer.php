@@ -2,15 +2,13 @@
 			<div class="push"><!--//--></div> <!-- clear both -->
 	</section> <!-- fin WRAPPER -->		
 			<footer class="footer">
-				<img src="<?php bloginfo('template_directory'); ?>/images/footer.png" alt="Samu Emmanuel" width="420px" height="70px" class="footerImg" />
+				<img src="<?php bloginfo('template_directory'); ?>/images/footer.png" alt="Samu Emmanuel" width="420" height="70" class="footerImg" />
 				<p>&copy; 2012 Samu Emmanuel</p>
 			</footer> <!-- fin FOOTER -->
 	
 		
 		<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-2.6.1.min.js"></script>	
-        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.min.js"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/js/less.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/plugins.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/js/main.min.js"></script>
 		<script>

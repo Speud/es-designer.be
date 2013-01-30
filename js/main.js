@@ -15,7 +15,7 @@
 		$("#contactName").focus();
 		
 		/* Bouton revenir en haut de la page */
-		$('body').prepend('<a href="#top" width="30px" height="30px" class="top_link" title="Revenir en haut de page"><img src="http://www.es-designer.be/wp-content/themes/es/images/backToTop.png" alt="Haut de page" /></a>');  
+		$('body').prepend('<a href="#top" class="top_link" title="Revenir en haut de page"><img src="http://www.es-designer.be/wp-content/themes/es/images/backToTop.png" width="30" height="30" alt="Haut de page" /></a>');  
 		$(window).scroll(function(){  
 			posScroll = $(document).scrollTop();  
 			if(posScroll >=550)  
